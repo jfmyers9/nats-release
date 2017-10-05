@@ -1,0 +1,10 @@
+---
+processes:
+- name: nats
+  executable: /var/vcap/packages/gnatsd/bin/gnatsd
+  args:
+  - -c
+  - /var/vcap/jobs/nats/config/nats.conf
+  limits:
+    open_files: 100000
+    memeory: 3000M
